@@ -1,0 +1,12 @@
+#container {
+    width: 500px; /* Define a largura do container */
+    margin: 20px auto; /* Centraliza o container na página */
+}
+
+
+#quadrado {
+    width: 100px;
+    height: 100px;
+    background-color: #FF0000; /* Cor vermelha */
+    border: 5px solid #000000; /* Borda preta */
+}
