@@ -1,3 +1,27 @@
+/* Define o céu com um gradiente azul para branco */
+#ceu {
+    top: 0%;
+    left: 0%;
+    position:absolute; /* Necessário para posicionar o sol dentro do céu */
+    width: 100vw; /* Largura total da viewport */
+    height: 100%; /* Altura de 50% da viewport para a parte superior do fundo */
+    background: linear-gradient(to bottom, #007bff, #FFFFFF); /* Gradiente de azul para branco */
+    z-index: -1;
+}
+
+/* Define o estilo do sol */
+#sol {
+    width: 100px;
+    height: 100px;
+    background-color: #FFFF00; /* Cor amarela */
+    border-radius: 50%; /* Torna o sol redondo */
+    position: absolute; /* Permite posicionar o sol em relação ao céu */
+    top: 20px; /* Distância do topo do céu */
+    right: 20px; /* Distância da borda direita do céu */
+    box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* Adiciona um brilho ao redor do sol */
+    z-index: -1;
+}
+
 #container {
     width: 100%; /* Garante que o container ocupe toda a largura disponível */
     height: 100vh;
@@ -77,22 +101,4 @@
 }
 
 
-/* Define o céu com um gradiente azul para branco */
-#ceu {
-    width: 100vw; /* Largura total da viewport */
-    height: 100%; /* Altura de 50% da viewport para a parte superior do fundo */
-    background: linear-gradient(to bottom, #007bff 0%, #00C8FF 50%, #FFFFFF 100%); /* Gradiente de azul para branco */
-    position:absolute; /* Necessário para posicionar o sol dentro do céu */
-}
 
-/* Define o estilo do sol */
-#sol {
-    width: 100px;
-    height: 100px;
-    background-color: #FFFF00; /* Cor amarela */
-    border-radius: 50%; /* Torna o sol redondo */
-    position: absolute; /* Permite posicionar o sol em relação ao céu */
-    top: 20px; /* Distância do topo do céu */
-    right: 20px; /* Distância da borda direita do céu */
-    box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* Adiciona um brilho ao redor do sol */
-}
