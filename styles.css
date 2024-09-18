@@ -1,6 +1,21 @@
 #container {
-    width: 500px; /* Define a largura do container */
+    width: 100%; /* Garante que o container ocupe toda a largura disponível */
+    max-width: 800px; /* Define um máximo para o container para não ficar muito largo */
     margin: 20px auto; /* Centraliza o container na página */
+    display: flex; /* Usa flexbox para organizar os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte se necessário */
+    justify-content: space-around; /* Distribui o espaço ao redor dos itens */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+#quadrado,
+#triangulo,
+#circulo,
+#estrela,
+#coracao {
+    margin: 20px; /* Adiciona margem ao redor de cada forma para separação visual */
+    width: 100px; /* Garante que todas as formas tenham o mesmo tamanho */
+    height: 100px; /* Garante que todas as formas tenham o mesmo tamanho */
 }
 
 
@@ -9,4 +24,53 @@
     height: 100px;
     background-color: #FF0000; /* Cor vermelha */
     border: 5px solid #000000; /* Borda preta */
+}
+
+#triangulo {
+    width: 100px; /* Largura da base do triângulo */
+    height: 100px; /* Altura total do triângulo */
+    background-color: transparent; /* Fundo transparente */
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%); /* Define a forma do triângulo */
+    background-color: #00FF00; /* Cor verde do triângulo */
+}
+
+
+#circulo {
+    width: 100px;
+    height: 100px;
+    background-color: #FFFF00; /* Cor amarela */
+    border-radius: 50%; /* Arredonda as bordas para criar um círculo */
+}
+
+#estrela {
+    width: 100px;
+    height: 100px;
+    background-color:#FFFF00; /* Cor amarela*/
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* Define a forma da estrela */
+}
+
+/* Forma de coração com pseudo-elementos ajustada */
+#coracao {
+    position: relative;
+    background-color: #FF0000;
+    transform: rotate(-45deg);
+}
+#coracao::before,
+#coracao::after {
+    content: '';
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: #FF0000;
+    border-radius: 50%;
+}
+
+#coracao::before {
+    top: -50px;
+    left: 0;
+}
+
+#coracao::after {
+    top: 0;
+    left: 50px;
 }
