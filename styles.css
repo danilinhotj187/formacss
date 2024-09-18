@@ -1,8 +1,9 @@
 #container {
     width: 100%; /* Garante que o container ocupe toda a largura disponível */
-    max-width: 800px; /* Define um máximo para o container para não ficar muito largo */
+    height: 100vh;
+    max-width: 1400px; /* Define um máximo para o container para não ficar muito largo */
     margin: 20px auto; /* Centraliza o container na página */
-    display: flex; /* Usa flexbox para organizar os itens */
+    display:flex; /* Usa flexbox para organizar os itens */
     flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte se necessário */
     justify-content: space-around; /* Distribui o espaço ao redor dos itens */
     align-items: center; /* Alinha os itens verticalmente ao centro */
@@ -73,4 +74,25 @@
 #coracao::after {
     top: 0;
     left: 50px;
+}
+
+
+/* Define o céu com um gradiente azul para branco */
+#ceu {
+    width: 100vw; /* Largura total da viewport */
+    height: 100%; /* Altura de 50% da viewport para a parte superior do fundo */
+    background: linear-gradient(to bottom, #007bff 0%, #00C8FF 50%, #FFFFFF 100%); /* Gradiente de azul para branco */
+    position:absolute; /* Necessário para posicionar o sol dentro do céu */
+}
+
+/* Define o estilo do sol */
+#sol {
+    width: 100px;
+    height: 100px;
+    background-color: #FFFF00; /* Cor amarela */
+    border-radius: 50%; /* Torna o sol redondo */
+    position: absolute; /* Permite posicionar o sol em relação ao céu */
+    top: 20px; /* Distância do topo do céu */
+    right: 20px; /* Distância da borda direita do céu */
+    box-shadow: 0 0 15px rgba(255, 223, 0, 0.8); /* Adiciona um brilho ao redor do sol */
 }
