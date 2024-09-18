@@ -100,5 +100,16 @@
     left: 50px;
 }
 
+#seta-direita {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-left: 100px solid rgb(203, 17, 17);
+    top: 75%;
+    left: 7%;
+  }
+  
 
 
