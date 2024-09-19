@@ -2,7 +2,6 @@
 
 body {
     background-color: #e0e0e0;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -10,7 +9,10 @@ body {
   }
   
   .carro {
-    position: relative;
+    position:absolute;
+    top: 20%;
+    left: 50%;
+    transform:translateX(-50%);
     width: 300px;
     height: 100px;
   }
@@ -30,8 +32,8 @@ body {
   .janela-esquerda,
   .janela-direita {
     position: absolute;
-    top: 15px;
-    width: 40px;
+    top: 22px;
+    width: 55px;
     height: 30px;
     background-color: lightblue;
   }
